@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Person {
+
+	private int age;
+	private String name;
+	public Person(String name,int age)
+	{
+		this.name=name;
+		this.age=age;
+		
+	}
+	public void displayPerson()
+	{
+		System.out.println("Name:"+name);
+		System.out.println("Age:"+age);
+	}
+	
+}
+public class Employee extends Person {
+    private int employeeId;
+    private double salary;
+
+    // Constructor for the Employee class
+    public Employee(String name, int age, int employeeId, double salary) {
+        super(name, age); // Using the super keyword to initialize the Person attributes
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    // Method to display the employee details
+    public void displayEmployee() {
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Salary: " + salary);
+    }
+}
+public class Main {
+
+	 public static void main(String[] args) {
+	        // Creating an Employee object
+	        Employee employee1 = new Employee("Pavithra", 20, 100, 50000);
+
+	        // Displaying the person details using the super keyword
+	        System.out.println("Person Details:");
+	        employee1.displayPerson();
+
+	        // Displaying the employee details
+	        System.out.println("Employee Details:");
+	        employee1.displayEmployee();
+	    }
+
+}
